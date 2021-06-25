@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/f4ac18f790141a5845e59f7d34bc7ed9 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>dijkstraPriorityQueue.cpp – Medium</title><meta name="description" content="GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body data-new-gr-c-s-loaded="14.1008.0"><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./e0c80fe8a8f97e36ee12acad3be3c810.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-6bbcda9afa41932201cf41d732898db6.css"><div id="gist93128241" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-dijkstrapriorityqueue-cpp" class="file my-2">
+    
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-c  ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip="">
+      <tbody><tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> Dijkstra shortest distance</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC2" class="blob-code blob-code-inner js-file-line">vector&lt;<span class="pl-k">long</span>&gt; <span class="pl-en">dijkstraPriorityQueue</span>(vector&lt;vector&lt;<span class="pl-k">int</span>&gt;&gt; &amp;graph,</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC3" class="blob-code blob-code-inner js-file-line">                                   <span class="pl-k">int</span> source) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC5" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span> Queue of pairs of distance to node number</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC6" class="blob-code blob-code-inner js-file-line">    priority_queue&lt;pair&lt;<span class="pl-k">int</span>, <span class="pl-k">int</span>&gt;, vector&lt;pair&lt;<span class="pl-k">int</span>, <span class="pl-k">int</span>&gt;&gt;,</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC7" class="blob-code blob-code-inner js-file-line">                   greater&lt;pair&lt;<span class="pl-k">int</span>, <span class="pl-k">int</span>&gt;&gt;&gt;</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC8" class="blob-code blob-code-inner js-file-line">            q;</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC9" class="blob-code blob-code-inner js-file-line">    vector&lt;<span class="pl-k">long</span>&gt; <span class="pl-c1">d</span>(graph.<span class="pl-c1">size</span>(), INT_MAX);</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC10" class="blob-code blob-code-inner js-file-line">    d[source] = <span class="pl-c1">0</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC12" class="blob-code blob-code-inner js-file-line">    q.<span class="pl-c1">push</span>(<span class="pl-c1">make_pair</span>(<span class="pl-c1">0</span>, source));</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC13" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC14" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">while</span> (!q.<span class="pl-c1">empty</span>()) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC15" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span> Find minimum</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC16" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">int</span> u = q.<span class="pl-c1">top</span>().<span class="pl-smi">second</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC17" class="blob-code blob-code-inner js-file-line">        q.<span class="pl-c1">pop</span>();</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC18" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC19" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span> Relax distances</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC20" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span> Rather than decreasing the values in the queue,</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC21" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span> we just add the updated distance to the queue again.</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC22" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; graph.<span class="pl-c1">size</span>(); j++) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC23" class="blob-code blob-code-inner js-file-line">            <span class="pl-k">if</span> (d[j] &gt; d[u] + graph[u][j]) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC24" class="blob-code blob-code-inner js-file-line">                d[j] = d[u] + graph[u][j];</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC25" class="blob-code blob-code-inner js-file-line">                q.<span class="pl-c1">push</span>(<span class="pl-c1">make_pair</span>(d[j], j));</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC26" class="blob-code blob-code-inner js-file-line">            }</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC27" class="blob-code blob-code-inner js-file-line">        }</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC28" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC29" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> d;</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrapriorityqueue-cpp-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-dijkstrapriorityqueue-cpp-LC30" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/ourarash/e0c80fe8a8f97e36ee12acad3be3c810/raw/798be169b58e02db128047d849f9064db66f94f9/dijkstraPriorityQueue.cpp" style="float:right">view raw</a>
+        <a href="https://gist.github.com/ourarash/e0c80fe8a8f97e36ee12acad3be3c810#file-dijkstrapriorityqueue-cpp">dijkstraPriorityQueue.cpp</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script></body></html>

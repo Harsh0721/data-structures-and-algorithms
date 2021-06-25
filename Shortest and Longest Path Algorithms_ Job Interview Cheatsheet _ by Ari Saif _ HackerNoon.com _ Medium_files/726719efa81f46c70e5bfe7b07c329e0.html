@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/726719efa81f46c70e5bfe7b07c329e0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>floydWarshal.cpp – Medium</title><meta name="description" content="GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body data-new-gr-c-s-loaded="14.1008.0"><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./a8071817b9e2e358c716d6095a85343d.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-6bbcda9afa41932201cf41d732898db6.css"><div id="gist93090201" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-floydwarshal-cpp" class="file my-2">
+    
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-c  ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip="">
+      <tbody><tr>
+        <td id="file-floydwarshal-cpp-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-floydwarshal-cpp-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> Floyd-Warshall Algorithm for finding the shortest distance</span></td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-floydwarshal-cpp-LC2" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-floydwarshal-cpp-LC3" class="blob-code blob-code-inner js-file-line">vector&lt;vector&lt;<span class="pl-k">long</span> <span class="pl-k">long</span>&gt;&gt; <span class="pl-en">floydWarshal</span>(vector&lt;vector&lt;<span class="pl-k">int</span>&gt;&gt; &amp;graph) {</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-floydwarshal-cpp-LC4" class="blob-code blob-code-inner js-file-line">    vector&lt;vector&lt;<span class="pl-k">long</span> <span class="pl-k">long</span>&gt;&gt; <span class="pl-c1">d</span>(graph.<span class="pl-c1">size</span>(),</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-floydwarshal-cpp-LC5" class="blob-code blob-code-inner js-file-line">                                vector&lt;<span class="pl-k">long</span> <span class="pl-k">long</span>&gt;(graph.<span class="pl-c1">size</span>()));</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-floydwarshal-cpp-LC6" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-floydwarshal-cpp-LC7" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span>Initialize d</span></td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-floydwarshal-cpp-LC8" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; graph.<span class="pl-c1">size</span>(); ++i) {</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-floydwarshal-cpp-LC9" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; graph.<span class="pl-c1">size</span>(); ++j) {</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-floydwarshal-cpp-LC10" class="blob-code blob-code-inner js-file-line">            d[i][j] = graph[i][j];</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-floydwarshal-cpp-LC11" class="blob-code blob-code-inner js-file-line">        }</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-floydwarshal-cpp-LC12" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-floydwarshal-cpp-LC13" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-floydwarshal-cpp-LC14" class="blob-code blob-code-inner js-file-line">   <span class="pl-k">for</span> (<span class="pl-k">int</span> k = <span class="pl-c1">0</span>; k &lt; graph.<span class="pl-c1">size</span>(); k++)</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-floydwarshal-cpp-LC15" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; graph.<span class="pl-c1">size</span>(); ++i)</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-floydwarshal-cpp-LC16" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; graph.<span class="pl-c1">size</span>(); ++j)</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-floydwarshal-cpp-LC17" class="blob-code blob-code-inner js-file-line">        d[i][j] = <span class="pl-c1">std::min</span>(d[i][j], d[i][k] + d[k][j]);</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-floydwarshal-cpp-LC18" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-floydwarshal-cpp-LC19" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> d;</td>
+      </tr>
+      <tr>
+        <td id="file-floydwarshal-cpp-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-floydwarshal-cpp-LC20" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/ourarash/a8071817b9e2e358c716d6095a85343d/raw/767f1868470fc08272598f22d39f73f1dba300cc/floydWarshal.cpp" style="float:right">view raw</a>
+        <a href="https://gist.github.com/ourarash/a8071817b9e2e358c716d6095a85343d#file-floydwarshal-cpp">floydWarshal.cpp</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script></body></html>

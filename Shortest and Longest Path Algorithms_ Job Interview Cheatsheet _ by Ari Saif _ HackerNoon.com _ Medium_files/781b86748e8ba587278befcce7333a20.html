@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/781b86748e8ba587278befcce7333a20 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>dijkstraShortestDistance.cpp – Medium</title><meta name="description" content="GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body data-new-gr-c-s-loaded="14.1008.0"><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./632101398c829c32920f8946a2b23831.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-6bbcda9afa41932201cf41d732898db6.css"><div id="gist93103677" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-dijkstrashortestdistance-cpp" class="file my-2">
+    
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-c  ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip="">
+      <tbody><tr>
+        <td id="file-dijkstrashortestdistance-cpp-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> Dijkstra shortest distance</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC2" class="blob-code blob-code-inner js-file-line">vector&lt;<span class="pl-k">long</span>&gt; <span class="pl-en">dijkstra</span>(vector&lt;vector&lt;<span class="pl-k">int</span>&gt;&gt; &amp;graph, <span class="pl-k">int</span> source) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC4" class="blob-code blob-code-inner js-file-line">    vector&lt;<span class="pl-k">long</span>&gt; <span class="pl-c1">d</span>(graph.<span class="pl-c1">size</span>());</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC5" class="blob-code blob-code-inner js-file-line">    vector&lt;<span class="pl-k">int</span>&gt; s;</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC6" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">for</span> (<span class="pl-k">int</span> i = <span class="pl-c1">0</span>; i &lt; graph.<span class="pl-c1">size</span>(); i++) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC7" class="blob-code blob-code-inner js-file-line">        d[i] = graph[source][i];</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC8" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC9" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC10" class="blob-code blob-code-inner js-file-line">    s.<span class="pl-c1">push_back</span>(source);</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC12" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">while</span> (s.<span class="pl-c1">size</span>() &lt; graph.<span class="pl-c1">size</span>()) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC13" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span>Find minimum</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC14" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">int</span> u = <span class="pl-c1">findMinInDButNotInS</span>(d, s);</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC15" class="blob-code blob-code-inner js-file-line">        s.<span class="pl-c1">push_back</span>(u);</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC16" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC17" class="blob-code blob-code-inner js-file-line">        <span class="pl-c"><span class="pl-c">//</span>Relax</span></td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC18" class="blob-code blob-code-inner js-file-line">        <span class="pl-k">for</span> (<span class="pl-k">int</span> j = <span class="pl-c1">0</span>; j &lt; graph.<span class="pl-c1">size</span>(); j++) {</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC19" class="blob-code blob-code-inner js-file-line">            d[j] = <span class="pl-c1">std::min</span>(d[j], d[u] + graph[u][j]);</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC20" class="blob-code blob-code-inner js-file-line">        }</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC21" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC22" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span> d;</td>
+      </tr>
+      <tr>
+        <td id="file-dijkstrashortestdistance-cpp-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-dijkstrashortestdistance-cpp-LC23" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/ourarash/632101398c829c32920f8946a2b23831/raw/35ad442a5bf30f92e1ad2ed22342c5e5e4bb30e9/dijkstraShortestDistance.cpp" style="float:right">view raw</a>
+        <a href="https://gist.github.com/ourarash/632101398c829c32920f8946a2b23831#file-dijkstrashortestdistance-cpp">dijkstraShortestDistance.cpp</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script><script defer="" src="./beacon.min.js.download" data-cf-beacon="{&quot;version&quot;:&quot;2021.4.0&quot;,&quot;rayId&quot;:&quot;64ac1591a88f2e10&quot;,&quot;si&quot;:10}"></script>
+</body></html>
